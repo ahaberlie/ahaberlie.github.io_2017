@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -18,6 +16,11 @@
   
     
   
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
@@ -41,11 +44,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://ahaberlie.github.io/tags/jekyll/">
+  <link rel="canonical" href="https://ahaberlie.github.io/publication/mcs-segmentation-classification/">
 
   
 
-  <title>Jekyll | Alex Haberlie</title>
+  <title>Identifying Mesoscale Convective Systems in Radar Mosaics. Part I: Segmentation and Classification | Alex Haberlie</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -153,32 +156,138 @@
   </div>
 </nav>
 
-
-
-
-
-<div class="universal-wrapper">
-
-  <h1>Jekyll</h1>
+<div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
 
   
 
-  
-  
-  <div>
-    <h2><a href="https://ahaberlie.github.io/post/migrate-from-jekyll/">Migrate from Jekyll to Hugo</a></h2>
-    <div class="article-style">
+
+  <div class="container pub-title">
+    <h1 itemprop="name">Identifying Mesoscale Convective Systems in Radar Mosaics. Part I: Segmentation and Classification</h1>
+    <span class="pub-authors" itemprop="author">
       
-      Learn how to migrate an existing website from Jekyll to Hugo.
+      A. M. Haberlie, W. S. Ashley
       
-    </div>
+    </span>
+    <span class="pull-right">
+      
+
+    </span>
   </div>
-  
-
-  
-
 
 </div>
+<div class="article-container">
+
+  
+  <img src="/img/headers/mcs-segment.png" class="pub-banner" itemprop="image">
+  
+
+  <h3>Abstract</h3>
+  <p class="pub-abstract" itemprop="text">This research evaluates the ability of image processing and select machine learning algorithms to identify mesoscale convective systems (MCSs) in radar reflectivity images for the conterminous United States.  The process used in this study is comprised of two parts: segmentation and classification.  Segmentation is performed by identifying contiguous or semi-contiguous regions of deep, moist convection that are organized on a horizontal scale of at least 100 km.  The second part, classification, is performed by first compiling a database of thousands of precipitation clusters, and then subjectively assigning each sample one of the following labels: 1) midlatitude MCS; 2) unorganized convective cluster; 3) tropical system; 4) synoptic system; and 5) ground clutter and/or noise.  The attributes of each sample, along with their assigned label, are used to train three machine learning algorithms: Random Forest, Gradient Boosting, and XGBoost.  Results using a testing dataset suggest that the algorithms can distinguish between MCS and non-MCS samples with high specificity and sensitivity.  Further, the trained algorithm predictions are well-calibrated, allowing reliable probabilistic classification.  The utility of this two-step procedure is illustrated by generating spatial frequency maps of automatically identified precipitation clusters that are stratified using various reflectivity and probabilistic prediction thresholds.  These results suggest that machine learning can add value by limiting the amount of false-positive (non-MCS) samples that are not removed by segmentation alone.</p>
+
+  
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading">Type</div>
+        <div class="col-xs-12 col-sm-9">
+          
+          <a href="/publication/#3">
+            Work in progress
+          </a>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="visible-xs space-below"></div>
+  
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
+        <div class="col-xs-12 col-sm-9">Journal of Applied Meteorology and Climatology (In Review)</div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="visible-xs space-below"></div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
+        <div class="col-xs-12 col-sm-9" itemprop="datePublished">
+          October, 2017
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="visible-xs space-below"></div>
+
+  <div class="row" style="padding-top: 10px">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading" style="line-height:34px;">Links</div>
+        <div class="col-xs-12 col-sm-9">
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="visible-xs space-below"></div>
+
+  <div class="space-below"></div>
+
+  <div class="article-style"><p>More detail can easily be written here using <em>Markdown</em> and $\rm \LaTeX$ math code.</p>
+</div>
+
+</div>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://ahaberlie.github.io/publication/reservoirs-thunderstorm-initiation/"><span
+      aria-hidden="true">&larr;</span> The effect of reservoirs on the climatology of warm-season thunderstorms in Southeast Texas, USA</a></li>
+    
+
+    
+    <li class="next"><a href="https://ahaberlie.github.io/publication/mcs-tracking-application/">Identifying Mesoscale Convective Systems in Radar Mosaics. Part 2: Tracking and Application <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
 <footer class="site-footer">
   <div class="container">
     <p class="powered-by">
@@ -244,12 +353,28 @@
 
     
     
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
 
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
     
     
 
   </body>
 </html>
-
-
 
