@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.30.2" />
+  <meta name="author" content="Alex Haberlie">
+  <meta name="description" content="PhD Candidate">
+
+  
+  
+  
+  
+    
+  
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+
+
+  
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://ahaberlie.github.io/project/wrf-on-gaea/">
+
+  
+
+  <title>Running WRF-ARW on GAEA Cluster at NIU | Alex Haberlie</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Alex Haberlie</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#research">
+            
+            <span>Research</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article article-project" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+
+    <div class="pub-title">
+      <h1 itemprop="name">Running WRF-ARW on GAEA Cluster at NIU</h1>
+      <span class="pub-authors" itemprop="author">&nbsp;</span>
+      <span class="pull-right">
+        
+
+      </span>
+    </div>
+
+    
+
+    <div class="article-style" itemprop="articleBody">
+      <p><html>
+<body>
+    <div class="wrapper">
+      <section></p>
+
+<h3>
+<a id="academic-positions" class="anchor" href="#academic-positions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Purpose</h3>
+
+<p>This page is to facilitate running WRF on NIU's GAEA cluster.  It is intended for users in the Department of Geography who belong to the spatialcogvis group.</p>
+<p>These instructions are adapted from Dr. Victor Gensini's <a href=http://weather.cod.edu/~vgensini/wrf/WRFDataAcquisitionandSimulation.pdf>WRF tutorial document.</a></p>
+<p>A big thanks to Dr. Kirk Duffin of the Computer Science department at NIU for setting up WRF and helping us to get started on this project.</p>
+
+<h3> 
+<a id="education" class="anchor" href="#education" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data</h3>
+
+<p>This example will use NARR data from 00 UTC on 10 July 2011 to 18 UTC on 11 July 2011 to simulate the progression of a severe Mesoscale Convective System. 
+</p>
+
+<h3> 
+<a id="education" class="anchor" href="#education" aria-hidden="true"><span class="octicon octicon-link"></span></a>Logging on to GAEA</h3>
+
+<p>Logging on to GAEA requires establishing an ssh connection to gaea.niu.edu.
+</p>
+
+<table>
+   <tbody>
+      <tr>
+         <b>Windows Users:</b>
+      </tr>
+   <tr>
+      <td>Download <a href=http://www.putty.org/> PuTTY </a></td>
+   </tr>
+   <tr>
+      <td>Open PuTTY and type gaea.niu.edu into the Host Name input field </a></td>
+   </tr>
+   <tr>
+      <td>Input username and password (GAEA specific, talk to Alex for more info) </a></td>
+   </tr>
+</tbody>
+</table>
+<p></p>
+<table>
+   <tbody>
+      <tr>
+         <b>Linux Users:</b>
+      </tr>
+
+   <tr>
+      <td>Open a terminal </a></td>
+   </tr>
+   <tr>
+      <td>Type ssh username@gaea.niu.edu </a></td>
+   </tr>
+   <tr>
+      <td>Input username and password (GAEA specific, talk to Alex for more info) </a></td>
+   </tr>
+</tbody>
+</table>
+
+<h3> 
+<a id="education" class="anchor" href="#education" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting NARR Data</h3>
+
+<p>Data source is the <a href=http://nomads.ncdc.noaa.gov/> National Centers for Environmental Information</a> 
+</p>
+
+<table>
+   <tbody>
+      <tr>
+         <b>Create Directory for WRF and data using the following UNIX commands:</b>
+      </tr>
+
+   <tr></tr>
+   <tr>
+      <td>cd /data1/spatialcogvis </a></td>
+   </tr>
+   <tr>
+      <td>mkdir username (this is whatever your username, project, etc., is) </a></td>
+   </tr>
+   <tr>
+      <td>cd username </a></td>
+   </tr>
+   <tr>
+      <td>mkdir narr </a></td>
+   </tr>
+</tbody>
+</table>
+<p></p>
+
+
+<table>
+
+   <tbody>
+      <tr><b>Download NARR data into the narr folder:</b>
+      </tr>
+   <tr>
+      <td>cd narr </a></td>
+   </tr>
+   <tr>
+      <td>use wget to download the following files:</td>
+   </tr>
+
+   <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110710/narr­a_221_20110710_0000_000.grb</font> </a></td>
+   </tr>
+      <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110710/narr­a_221_20110710_0300_000.grb </font></a></td>
+   </tr>
+      <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110710/narr­a_221_20110710_0600_000.grb </font></a></td>
+   </tr>
+      <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110710/narr­a_221_20110710_0900_000.grb </font></a></td>
+   </tr>
+      <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110710/narr­a_221_20110710_1200_000.grb</font> </a></td>
+   </tr>
+      <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110710/narr­a_221_20110710_1500_000.grb </font></a></td>
+   </tr>
+      <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110710/narr­a_221_20110710_1800_000.grb </font></a></td>
+   </tr>
+      <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110710/narr­a_221_20110710_2100_000.grb </font></a></td>
+   </tr>
+      <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110711/narr­a_221_20110711_0000_000.grb </font></a></td>
+   </tr>
+      <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110711/narr­a_221_20110711_0300_000.grb </font></a></td>
+   </tr>
+      <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110711/narr­a_221_20110711_0600_000.grb </font></a></td>
+   </tr>
+      <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110711/narr­a_221_20110711_0900_000.grb </font></a></td>
+   </tr>
+      <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110711/narr­a_221_20110711_1200_000.grb </font></a></td>
+   </tr>
+      <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110711/narr­a_221_20110711_1500_000.grb </font></a></td>
+   </tr>
+      <tr>
+      <td><font size=1>wget http://nomads.ncdc.noaa.gov/data/narr/201107/20110711/narr­a_221_20110711_1800_000.grb </font></a></td>
+   </tr>
+</tbody>
+</table>
+
+<h3> 
+<a id="education" class="anchor" href="#education" aria-hidden="true"><span class="octicon octicon-link"></span></a>Defining Simulation Parameters</h3>
+
+<p>Two files are required to define things like the spatial domain of the simulation, where output data are stored, and where the processes can find pertinent data and configuration files.
+</p>
+
+<p>Place the follwing files in your WRF directory:   
+</p>
+
+<table>
+   <tbody>
+      <tr>
+         <td><a href=wrf_proj_files/namelist.input>namelist.input:</a> For more info on variables in namelist.input, 
+                 see <a href=http://www2.mmm.ucar.edu/wrf/OnLineTutorial/Basics/WRF/namelist.input.htm>this ucar page</a>
+                 or Dr. Victor Gensini's document <a href=http://weather.cod.edu/~vgensini/wrf/WRFDataAcquisitionandSimulation.pdf>here</a></td>
+      </tr>
+      
+       <tr>
+         <td> <a href=wrf_proj_files/namelist.input>namelist.wps:</a> For more info on variables in namelist.wps, 
+                 see <a href=http://www2.mmm.ucar.edu/wrf/OnLineTutorial/Basics/GEOGRID/geogrid_namelist.htm>this ucar page</a>
+                 or Dr. Victor Gensini's document <a href=http://weather.cod.edu/~vgensini/wrf/WRFDataAcquisitionandSimulation.pdf>here</a></td>
+      </tr>
+ 
+    </tr>
+   </tbody>
+</table>
+
+<p>These files define several parameters, such as the range of the simulation, the spatial domain, and the spatial and temporal resolution.  
+</p>
+
+<p>
+For this case, the domain will encompass the following shaded areas with 4x4 km spatial and 3 hourly temporal output:
+</p>
+
+<p><img src="wrf_proj_files/domain.jpg" alt="Domain" style="width:500px;height:500px;"></p>
+
+<h3> 
+<a id="education" class="anchor" href="#education" aria-hidden="true"><span class="octicon octicon-link"></span></a>Preparing for the Simulation</h3>
+
+<table>
+   <tbody>
+      <tr>
+         <b>Some files need to be "linked" or moved using the following UNIX commands:</b>
+      </tr>
+
+   <tr></tr>
+   <tr>
+      <td>cd /data1/spatialcogvis/username </a></td>
+   </tr>
+   <tr>
+      <td>ln -sf /data1/local/stow/WPS-3.8.1/Variable_Tables/Vtable.NARR Vtable </a></td>
+   </tr>
+   <tr>
+      <td>mkdir shared_tables </a></td>
+   </tr>
+   <tr>
+      <td>cp /data1/spatialcogvis/WRF/shared_tables/* /data1/spatialcogvis/username/shared_tables </a></td>
+   </tr>
+   <tr>
+      <td>mkdir my_output </td>
+   </tr>
+   <tr>
+      <td>ln -sf /data1/local/stow/WPS-3.8.1/bin/link_grib.csh . </td>
+   </tr>
+   <tr>
+      <td>ln -sf /data1/local/stow/WRF-3.8.1/run/* . 
+      <p>(<b>You will need to replace your own namelist.input since this will overwrite it.</b>)</p>
+      <td>
+   </tr>
+</tbody>
+</table>
+<p></p>
+
+<h3> 
+<a id="education" class="anchor" href="#education" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running Pre-Processing Tasks</h3>
+
+<p><b>Before WRF can be run, four processes need to be executed:</b></p>
+
+<p><b>GEOGRID:</b></p>
+
+<table>
+    <tbody>
+        <tr>
+            <td>Copy the following job file to your home directory (cd ~): <a href=wrf_proj_files/geogrid.job>geogrid.job</a>
+        </tr>
+        <tr>
+            <td>Submit the job to the cluster queue using the command: qsub geogrid.job</td>
+        </tr>
+        <tr>
+            <td>When this is complete, you should see a file named "geo_em.d01.nc" or similar in your my_output folder.</td>
+        </tr>
+    </tbody>
+</table>
+
+<p><b>UNGRIB (for some reason, ungrib.job does not work.  Skip striked steps):</b></p>
+
+<table>
+    <tbody>   
+    <tr>
+        <td>Link narr grib files to WRF directory using command: 
+        <p>link_grib.csh /data1/spatialcogvis/username/narr/*.grb</p>
+        </td>
+    </tr>
+    <tr>
+        <td>If this succeeded, you should see files like "GRIBFILE.AAA, GRIBFILE.AAB, etc." in your WRF directory.
+        </td>
+    </tr>
+
+    <tr>
+        <td><strike>Copy the following job file to your home directory (cd ~): <a href=wrf_proj_files/ungrib.job>ungrib.job</a></strike> 
+        </td>
+    </tr>
+    <tr>
+        <td><strike>Submit the job to the cluster queue using the command: qsub ungrib.job** </strike></td>
+    </tr>   
+    <tr>
+        <td>Manual UNGRIB is performed by running the following commands in your WRF directory:</td>
+    </tr>
+    <tr>
+        <td>module add wrf/wrf-3.8.1</td>
+    </tr>
+    <tr>
+        <td>ungrib.exe</td>
+    </tr>         
+    <tr>
+        <td>When this is complete, you should see files like "FILE:2011-07-11_18, FILE:2011-07-11_15, etc." in your WRF directory.</td>
+    </tr>
+    </tbody>
+</table>
+
+<p><b>METGRID:</b></p>
+
+<table>
+    <tbody>
+    <tr>
+        <td>1) Copy the following job file to your home directory (cd ~): <a href=wrf_proj_files/metgrid.job>metgrid.job</a>
+        </td>
+    </tr>
+    <tr>
+        <td>2) Submit the job to the cluster queue using the command: qsub ungrib.job </td>
+    </tr>
+    <tr>
+        <td>When this is complete, you should see files like "met_em.d01.2011-07-11_18:00:00.nc" in your my_output directory.</td>
+    </tr>
+    </tbody>
+</table>
+
+<p><b>REAL:</b></p>
+
+<table>
+    <tbody>
+    <tr>
+        <td>1) Link the met_em files to your WRF directory using this command: ln -sf /data1/spatialcogvis/username/my_output/met_em.d* .
+        </td>
+    <tr>
+        <td>2) Copy the following job file to your home directory (cd ~): <a href=wrf_proj_files/real.job>real.job</a></td>
+    </tr>
+    <tr>
+        <td>3) Submit the job to the cluster queue using the command: qsub real.job </td>
+    </tr>
+    <tr>
+        <td>When this is complete, you should see two files "wrfbdy_d01" and "wrfinput_d01" in your WRF directory.</td>
+    </tr>
+    </tbody>
+</table>
+
+<p></tbody>
+</table>
+<p></p></p>
+
+<h3> 
+<a id="education" class="anchor" href="#education" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running WRF</h3>
+
+<p><table>
+   <tbody>
+      <tr>
+         <b>At this point, it is pretty straightforward!</b>
+      </tr>
+      <tr>
+         <td>1) Copy the following job file to your home directory (cd ~): <a href=wrf_proj_files/run_wrf.job>run_wrf.job</a></td>
+      </tr>
+      <tr>
+         <td>2) Submit the job to the cluster queue using the command: qsub run_wrf.job </td>
+      </tr>
+      <tr>
+         <td>The provided settings ask for an allocation of 5 nodes with 8 processors per node, for a total of 40 processors.</td>
+      </tr>
+      <tr>
+         <td>You can check to see if your process is still running by using this command: qstat</td>
+      </tr>
+      <tr>
+         <td>As this process is running, you will see large netCDF files like &ldquo;wrfout_d01_2011-07-10_18:00:00.nc&rdquo; populating your WRF directory.
+   </tbody>
+<table></p>
+
+<h3> 
+<a id="education" class="anchor" href="#education" aria-hidden="true"><span class="octicon octicon-link"></span></a>Post-Processing (TBD)</h3>
+
+<p>Updated 11/01/2017</p>
+
+
+      
+      
+      
+
+      
+        
+        
+        
+        
+
+        
+        
+        
+        
+      
+
+    </div>
+  </div>
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+
+    
+    <li class="next"><a href="https://ahaberlie.github.io/project/mcs-segmentation-classificiation-tracking/">MCS Segmentation, Classification, and Tracking Project <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Alex Haberlie &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+
+    
+    
+
+  </body>
+</html>
+

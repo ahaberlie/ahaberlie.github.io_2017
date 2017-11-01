@@ -77,6 +77,15 @@
     
     <url>
     
+      <loc>https://ahaberlie.github.io/project/wrf-on-gaea/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://ahaberlie.github.io/post/getting-started/</loc>
       <lastmod>2017-09-03T00:00:00-05:00</lastmod>
     </url>
@@ -197,6 +206,26 @@
     
     <url>
     
+      <loc>https://ahaberlie.github.io/tags/climate-simulations/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://ahaberlie.github.io/tags/high-performance-computing/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://ahaberlie.github.io/tags/hugo/</loc>
       <lastmod>2017-09-03T00:00:00-05:00</lastmod>
       <priority>0</priority>
@@ -267,6 +296,16 @@
     
     <url>
     
+      <loc>https://ahaberlie.github.io/tags/regional-climate-modeling/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://ahaberlie.github.io/tags/storm-tracking/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -279,6 +318,16 @@
     
       <loc>https://ahaberlie.github.io/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://ahaberlie.github.io/tags/wrf/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
